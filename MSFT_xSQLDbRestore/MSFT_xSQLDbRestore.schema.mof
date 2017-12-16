@@ -3,10 +3,10 @@
 class MSFT_xSQLDbRestore : OMI_BaseResource
 {
     [Write, ValueMap{"Absent","Present"}, Values{"Absent","Present"}] String Ensure;
-    [Write, Description("Folder containing one or more backup (.BAK) files")] String BackupFileLocation;
+    [Key, Description("Folder containing one or more backup (.BAK) files")] String BackupFileLocation;
     [Write, Description("Destination path for the database files (.MDF).")] String DataPath;
     [Write, Description("Destination path for the log files (.LDF).")] String LogPath;
     [Write, Description("SQL server's hostname.")] String SQLServer;
-    [Key, Description("Instance name (e.g. MSSQLSERVER)")] String SQLInstanceName;
+    [Write, Description("Instance name (e.g. MSSQLSERVER)")] String SQLInstanceName;
 };
 
