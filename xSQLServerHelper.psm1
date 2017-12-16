@@ -1271,13 +1271,13 @@ function Invoke-DatabaseRestore
         $SmoRestoreFiles.set_logicalFileName($Item.LogicalFileName)
         $SmoRestoreFiles.set_PhysicalFileName($Item.PhysicalFileName)
         
-        $SmoRestore.RelocateFiles.Add($SmoRestoreFiles) #| Out-Null
+        $SmoRestore.RelocateFiles.Add($SmoRestoreFiles) | Out-Null
     }
     $DbName = $oRestore[0].DatabaseName
     $ServerName = $SqlServerObject.ComputerNamePhysicalNetBIOS
     
     # Make sure large restores don't timeout
-    $SqlServerObject.ConnectionContext.StatementTimeout = 0
+    $SqlServerObject.ConnectionContext.StatementTimeout = 0 #Not sure if this is working. Might need to be in Connect-SQL
 
     #Kill all connections
     $SqlServerObject.KillAllProcesses($dbname)
