@@ -50,7 +50,8 @@ function Set-TargetResource
         [ValidateSet("Absent","Present")]
         [System.String]
         $Ensure,
-
+        
+        [parameter(Mandatory = $true)]
         [System.String]
         $BackupFileLocation,
 
@@ -63,7 +64,6 @@ function Set-TargetResource
         [System.String]
         $SQLServer,
 
-        [parameter(Mandatory = $true)]
         [System.String]
         $SQLInstanceName
     )
@@ -95,7 +95,8 @@ function Test-TargetResource
         [ValidateSet("Absent","Present")]
         [System.String]
         $Ensure,
-
+        
+        [parameter(Mandatory = $true)]
         [System.String]
         $BackupFileLocation,
 
@@ -108,7 +109,6 @@ function Test-TargetResource
         [System.String]
         $SQLServer,
 
-        [parameter(Mandatory = $true)]
         [System.String]
         $SQLInstanceName
     )
