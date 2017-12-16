@@ -9,7 +9,7 @@ I should really raise a PR and get it added properly, but A) nobody else is like
 
 **To use**, 
 
- 1. Copy MSFT_xSqlDbRestore to ..Modules\xSqlServer\DSCResources\
+ 1. Copy MSFT_xSqlDbRestore.ps1 to ..Modules\xSqlServer\DSCResources\
  2. Overwrite xSqlServerHelper.psm1 with the one in ..Modules\xSqlServer\.
 
 If you don't want to run the risk of damaging MS's work with my shoddy code, the two functions `Get-DatabaseRestoreStatus` and `Invoke-DatabaseRestore` are at the bottom. 
